@@ -3,13 +3,13 @@
   "name": "ISKCON Sadhana Portal",
   "icons": [
     {
-      "src": "/Iskcon_Sadhana_Web/vite.svg", 
+      "src": "./vite.svg", 
       "type": "image/svg+xml",
       "sizes": "192x192 512x512",
       "purpose": "any maskable"
     }
   ],
-  "start_url": "/Iskcon_Sadhana_Web/",
+  "start_url": "./",
   "display": "standalone",
   "theme_color": "#ea580c",
   "background_color": "#FCFAF8"
