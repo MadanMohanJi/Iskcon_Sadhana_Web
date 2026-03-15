@@ -17,12 +17,14 @@ messaging.onBackgroundMessage(function(payload) {
   const notificationTitle = payload.notification.title;
   const notificationOptions = {
     body: payload.notification.body,
-    icon: '/vite.svg'
+    icon: './vite.svg' // यहाँ डॉट (.) लगा दिया है ताकि आइकॉन सही से दिखे
   };
   self.registration.showNotification(notificationTitle, notificationOptions);
 });
 
-// PWA Install Criteria को पास करने के लिए यह ज़रूरी है
+// PWA Install Criteria और No-op Warning को ठीक करने के लिए असली Fetch Handler
 self.addEventListener('fetch', function(event) {
-  // हम यहाँ कुछ नहीं कर रहे, बस Chrome को संतुष्ट कर रहे हैं
-});
+  event.respondWith(
+    fetch(event.request).catch(function() {
+      // अगर यूज़र ऑफलाइन (बिना इंटरनेट के) है, तो यह मैसेज दिखेगा
+      return new Response('हरे कृष्णा! आप अभी ऑफलाइन हैं।
