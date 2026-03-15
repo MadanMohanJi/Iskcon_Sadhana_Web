@@ -9,7 +9,7 @@
       "purpose": "any maskable"
     }
   ],
-  "start_url": "/Iskcon_Sadhana_Web/", 
+  "start_url": "/Iskcon_Sadhana_Web/",
   "display": "standalone",
   "theme_color": "#ea580c",
   "background_color": "#FCFAF8"
