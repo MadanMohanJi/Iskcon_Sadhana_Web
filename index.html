@@ -11,18 +11,17 @@
     <meta name="apple-mobile-web-app-title" content="Sadhana">
     
     <link rel="apple-touch-icon" href="/Iskcon_Sadhana_Web/vite.svg">
-    <link rel="manifest" href="/Iskcon_Sadhana_Web/manifest.json" />
+    <link rel="manifest" href="/manifest.json" />
   </head>
   <body>
     <div id="root"></div>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
-          // यहाँ भी /Iskcon_Sadhana_Web/ जोड़ें
-          navigator.serviceWorker.register('/Iskcon_Sadhana_Web/firebase-messaging-sw.js')
+          navigator.serviceWorker.register('/firebase-messaging-sw.js')
           .then(function(registration) {
             console.log('ServiceWorker registration successful');
-          }, function(err) {
+          }).catch(function(err) {
             console.log('ServiceWorker registration failed: ', err);
           });
         });
