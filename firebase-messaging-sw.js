@@ -27,4 +27,9 @@ self.addEventListener('fetch', function(event) {
   event.respondWith(
     fetch(event.request).catch(function() {
       // अगर यूज़र ऑफलाइन (बिना इंटरनेट के) है, तो यह मैसेज दिखेगा
-      return new Response('हरे कृष्णा! आप अभी ऑफलाइन हैं।
+      return new Response('हरे कृष्णा! आप अभी ऑफलाइन हैं। कृपया इंटरनेट चालू करें।', {
+        headers: { 'Content-Type': 'text/plain; charset=utf-8' }
+      });
+    })
+  );
+});
