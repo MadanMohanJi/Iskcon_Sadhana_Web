@@ -1,15 +1,14 @@
 {
   "short_name": "Sadhana",
-  "name": "ISKCON Sadhana Portal",
+  "name": "Sadhana Portal",
   "icons": [
     {
-      "src": "./vite.svg", 
-      "type": "image/svg+xml",
+      "src": "logo.png",
       "sizes": "192x192 512x512",
-      "purpose": "any maskable"
+      "type": "image/png"
     }
   ],
-  "start_url": "./",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#ea580c",
   "background_color": "#FCFAF8"
